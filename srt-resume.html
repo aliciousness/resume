@@ -27,7 +27,7 @@
 
             <div class="yui-u">
               <div class="contact-info">
-                <h3><a id="pdf" href="#">Download PDF</a></h3>
+                <!-- <h3><a id="pdf" href="#">Download PDF</a></h3> -->
                 <h3>
                   <a href="mailto:craddock9richard@gmail.com"
                     >craddock9richard@gmail.com</a
@@ -50,11 +50,7 @@
                   <h2>Profile</h2>
                 </div>
                 <div class="yui-u">
-                  <p class="enlarge">
-                    Progressively evolve cross-platform ideas before impactful
-                    infomediaries. Energistically visualize tactical initiatives
-                    before cross-media catalysts for change.
-                  </p>
+                  <p class="enlarge">TODO: REMEMBER IMPORTANT NOTE</p>
                 </div>
               </div>
               <!--// .yui-gf -->
@@ -101,7 +97,7 @@
                   <ul class="talent">
                     <li>HTML</li>
                     <li>CSS</li>
-                    <li class="last">Javascript</li>
+                    <li class="last">JavaScript</li>
                   </ul>
 
                   <ul class="talent">
@@ -138,24 +134,24 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      •Developed a bot on Slack that interacts with a school
+                      • Developed a bot on Slack that interacts with a school
                       psychologist to collect, store and read information to the
                       user. Utilizing API Gateway to communicate with the Slack
                       bot I created I am able to use Lambda to interact with the
                       user.
                     </p>
                     <p>
-                      •The bot takes 3 different root commands which are
+                      • The bot takes 3 different root commands which are
                       followed by 2 other commands, the first and last name of
                       the child, the user would like to retrieve, change or
                       store.
                     </p>
                     <p>
-                      •Utilizing DDB the user can retrieve information like the
+                      • Utilizing DDB the user can retrieve information like the
                       date the information was stored, 60 days from the stored
                       date and when the report are finished.
                     </p>
-                    <p>•I developed this project leveraging Pulumi</p>
+                    <p>• I developed this project leveraging Pulumi</p>
                   </div>
 
                   <div class="job">
@@ -171,12 +167,13 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      •Created a lambda that would make a call to OpenWeatherAPI
+                      • Created a lambda that would make a call to
+                      OpenWeatherAPI
                     </p>
                     <p>
-                      •The lambda would parse through the event and then post to
-                      a Slack channel with the location, sunrise, sunset, temp
-                      or the chosen location
+                      • The lambda would parse through the event and then post
+                      to a Slack channel with the location, sunrise, sunset,
+                      temp or the chosen location
                     </p>
                   </div>
 
@@ -192,18 +189,18 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      •Utilizing pulumi I created an AWS VPC infrastructure with
-                      one public subnet and one private subnet
+                      • Utilizing pulumi I created an AWS VPC infrastructure
+                      with one public subnet and one private subnet
                     </p>
                     <p>
-                      •In this network your instances will be connected to the
+                      • In this network your instances will be connected to the
                       internet through the public subnet but your private
                       instance will be shielded from unauthorized ingress access
                       but at the same-time can have egress access to the
                       internet for OS updates
                     </p>
                     <p>
-                      •This infrasutre is both scalable and flexable with a
+                      • This infrasutre is both scalable and flexable with a
                       simple change of an argument it will change the number of
                       subnets and available ips as well as change how many
                       availablity zones for fault tolerance
@@ -222,13 +219,24 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      •Exercising CI/CD practices and using a website I created
+                      • Exercising CI/CD practices and using a website I created
                       for my resume
                     </p>
                     <p>
-                      •I created a CodePipeline that runs a CodeBuild project
-                      that zips up the scripts and puts the package into an S3
-                      bucket
+                      • I created a CodePipeline that runs a CodeBuild project
+                      that takes the scripts from my Github repository with each
+                      commit to the main branch and puts the artifacts into an
+                      S3 bucket
+                    </p>
+                    <p>
+                      • Following, with my Codebuild project in combination with
+                      my buildspec. All files are zipped up and put into another
+                      s3 bucket
+                    </p>
+                    <p>
+                      • Finally, the pipeline then runs a lambda script that
+                      extracts all the files and uploads them to a s3 that is
+                      publicly hosted with my domain name.
                     </p>
                   </div>
                 </div>
@@ -240,11 +248,23 @@
                 <div class="yui-u first">
                   <h2>Education</h2>
                 </div>
-                <div class="yui-u">
-                  <h2>Indiana University - Bloomington, Indiana</h2>
-                  <h3>
-                    Dual Major, Economics and English &mdash;
-                    <strong>4.0 GPA</strong>
+                <div class="yui-u edu">
+                  <h2 class="job last">Udemy:</h2>
+                  <h3 class="edu">
+                    • Build Responsive Real-World Websites with HTML5 and CSS3
+                  </h3>
+                  <h3 class="edu">
+                    • 2021 Complete Python Bootcamp From Zero to Hero in Python
+                  </h3>
+                  <h3 class="edu">• Advanced CSS and Sass</h3>
+                  <h3 class="edu">• GitHub Ultimate: Master Git and GitHub</h3>
+
+                  <h3 class="edu">• The complete JavaScript Course 2022</h3>
+                  <h3 class="edu">
+                    • Learn Linux in 5 Days and level up your career
+                  </h3>
+                  <h3 class="edu">
+                    • 100 Days of Code: The Complete Python Pro Bootcamp
                   </h3>
                 </div>
               </div>

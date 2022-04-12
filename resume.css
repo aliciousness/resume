@@ -182,7 +182,20 @@ a#pdf:hover {
 /* --// override to force 1/8th width grids -- */
 .yui-gf .yui-u {
   width: 80.2%;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .yui-gf div.first {
   width: 12.3%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.edu {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.yui-u div.edu {
+  padding-bottom: 6px;
 }
