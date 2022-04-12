@@ -10,6 +10,5 @@ phases:
       - npm build
   post_build:
     commands:
-      - pwd
       - zip -r pulumi.zip .
       - aws s3 cp pulumi.zip s3://$S3_BUCKET/pulumi.zip
