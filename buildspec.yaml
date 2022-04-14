@@ -11,4 +11,4 @@ phases:
   post_build:
     commands:
       - zip -r resume.zip .
-      - aws s3 cp pulumi.zip s3://$S3_BUCKET/resume.zip
+      - aws s3 cp resume.zip s3://$S3_BUCKET/resume.zip
