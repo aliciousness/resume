@@ -10,5 +10,4 @@ phases:
       - npm build
   post_build:
     commands:
-      - zip -r resume.zip .
-      - aws s3 cp resume.zip s3://$S3_BUCKET/resume.zip
+      - aws s3 mv * s3://$S3_BUCKET/www
