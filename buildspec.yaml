@@ -12,5 +12,5 @@ phases:
     commands:
       - pwd
       - ls
-      - aws s3 cp . s3://$S3_BUCKET --include "*.html" --include "*.css"
+      - aws s3 cp /src s3://$S3_BUCKET/ --recursive --include "*.html" --include "*.css"
       - aws s3 ls s3://$S3_BUCKET
