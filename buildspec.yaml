@@ -10,7 +10,5 @@ phases:
       - npm build
   post_build:
     commands:
-      - pwd
-      - ls
-      - aws s3 cp ./ s3://$S3_BUCKET/ --recursive  --exclude "*.yaml" --exclude "*.md"
+      - aws s3 cp ./ s3://$S3_BUCKET/ --recursive  --exclude "*.yaml" --exclude "*.md" --exclude "*.json"
       - aws s3 ls s3://$S3_BUCKET
