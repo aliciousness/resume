@@ -16,4 +16,4 @@ phases:
       - mv index.html resume.css error.html error.css www
       - ls www
       - cd www
-      - aws s3 mv ./www s3://$S3_BUCKET
+      - aws s3 mv www s3://$S3_BUCKET
