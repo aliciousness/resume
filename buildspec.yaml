@@ -12,5 +12,6 @@ phases:
     commands:
       - pwd
       - ls
+      - mkdir www
       - mv * ./www
       - aws s3 mv -r ./www s3://$S3_BUCKET/index.hmtl
