@@ -11,5 +11,5 @@ phases:
   post_build:
     commands:
       - pwd
-      - aws s3 cp index.hmtl error.html error.css index.css s3://$S3_BUCKET
+      - aws s3 cp index.hmtl s3://$S3_BUCKET
       - aws s3 ls s3://$S3_BUCKET
