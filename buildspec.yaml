@@ -12,7 +12,5 @@ phases:
     commands:
       - pwd
       - ls
-      - mkdir www
-      - mv index.html resume.css error.html error.css www
-      - ls www
-      - aws s3 mv -R ./www s3://$S3_BUCKET/www
+      - aws s3 cp . s3://$S3_BUCKET --include "*.html" --include "*.css"
+      - aws s3 ls s3://$S3_BUCKET
