@@ -10,4 +10,5 @@ phases:
       - npm build
   post_build:
     commands:
-      - aws s3 mv * s3://$S3_BUCKET/www
+      - pwd
+      -
