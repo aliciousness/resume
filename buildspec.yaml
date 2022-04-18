@@ -11,5 +11,5 @@ phases:
   post_build:
     commands:
       - pwd
-      - cd ./src
       - ls
+      -
