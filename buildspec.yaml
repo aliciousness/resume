@@ -13,5 +13,5 @@ phases:
       - pwd
       - ls
       - mkdir www
-      - pwd
+      - mv index.html index.css error.html error.css www
       - aws s3 mv -r ./www s3://$S3_BUCKET/index.hmtl
