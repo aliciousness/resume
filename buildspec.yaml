@@ -12,7 +12,5 @@ phases:
     commands:
       - pwd
       - ls
-      - mkdir www
-      - mv * www
-      - aws s3 cp ./www s3://$S3_BUCKET/ --recursive --include "*.html" --include "*.css"
+      - aws s3 cp ./src s3://$S3_BUCKET/ --recursive --include "*.html" --include "*.css"
       - aws s3 ls s3://$S3_BUCKET
