@@ -9,12 +9,7 @@
     <meta name="keywords" content="Craddock" />
     <meta name="description" content="This is a resume for Richard Craddock" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css"
-      media="all"
-    />
+    <link rel="stylesheet" type="text/css" href="reset.css" media="all" />
     <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
   </head>
   <body>
@@ -128,7 +123,7 @@
                   <div class="job">
                     <h2>
                       <a href="https://github.com/aliciousness/caseyProject"
-                        >Slack Phycologist Data Collection Application</a
+                        >Slack Psychologist Data Collection Application</a
                       >
                     </h2>
                     <!--company-->
@@ -226,20 +221,42 @@
                       for my resume
                     </p>
                     <p>
-                      • I created a CodePipeline that runs a CodeBuild project
+                      • I developed a CodePipeline that runs a CodeBuild project
                       that takes the scripts from my Github repository with each
-                      commit to the main branch and puts the artifacts into an
-                      S3 bucket
+                      commit to the main branch and puts my html and css files
+                      into an S3 bucket
                     </p>
                     <p>
-                      • Following, with my Codebuild project in combination with
-                      my buildspec. All files are zipped up and put into another
-                      s3 bucket
+                      • Following, I register a unique dns to host my resume
+                      using route53.
                     </p>
                     <p>
-                      • Finally, the pipeline then runs a lambda script that
-                      extracts all the files and uploads them to a s3 that is
-                      publicly hosted with my domain name.
+                      • Using the hosted zone AWS created for that dns, I then
+                      continued to make the bucket that hosted my resume public,
+                      and creating an A record in route53 to point that dns to
+                      my bucket. As well as creating another bucket to redirect
+                      traffic for another record name (www.richardcraddock.me)
+                    </p>
+                    <p>
+                      • After both buckets are created, and both records point
+                      to my bucket hosting my resume. The resume is up but it is
+                      using HTTP protocol which is not sercure, this needed to
+                      be fixed.
+                    </p>
+                    <p>
+                      • To change my resume to HTTP to HTTPS and cache my resume
+                      in multiple edge locations. AWS cloudfront be right for
+                      the job. First, I had to create two certificates utilizing
+                      Certificate Manager with the names of both dns records.
+                      After certificates created and CNAME records deployed in
+                      my hosted zone. I then created two Distributions on
+                      CloudFront using the respected certificate.
+                    </p>
+                    <p>
+                      • Once distributions created and they point to my s3
+                      bucket. Next, i had to edit the A records to point to each
+                      distributions. Finally, i changed the redirection on
+                      www.richardcraddock.me bucket from http to https
                     </p>
                   </div>
                 </div>
