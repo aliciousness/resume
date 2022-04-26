@@ -138,16 +138,16 @@
                       and relay confidential information to the consumer. The
                       bot provides the consumer with a more efficient
                       organizational system for deadline management. Utilizing
-                      API Gateway to communicate with the bot, I am able to use
-                      Lambda to seamlessly interact with the user.
+                      API Gateway to communicate with the bot, AWS Lambda is
+                      able to seamlessly interact with the user.
                     </p>
                     <p>
                       • The bot operates with three different root commands,
                       followed by two other commands. The three commands allow
                       for the consumer to retrieve, change, or store client
-                      information using their client's full name. Utilizing AWS
-                      DynamoDB the consumer can retrieve information such as the
-                      initial date the information was stored, sixtieth day
+                      information using their client's full name. Applying AWS
+                      DynamoDB, the consumer can retrieve information such as
+                      the initial date the information was stored, sixtieth day
                       deadline from the stored date, and the date the
                       psycho-educational evaluation is completed.
                     </p>
@@ -167,32 +167,32 @@
 
                     <p>
                       • Exercising CI/CD, AWS CodePipeline and AWS CodeBuild,
-                      the scripts from my Github repository are forwarded with
+                      the scripts from a Github repository are forwarded with
                       each commit to the main branch and deposits HTML and CSS
                       files into an S3 bucket.
                     </p>
                     <p>
-                      • Registering an unique DNS to host my resume using AWS
-                      Route53. Using the hosted zone AWS created, I continued to
-                      make the bucket that hosted my resume public while
-                      creating a record in Route53 to point the DNS to the
-                      bucket. An additional bucket was created to redirect
-                      traffic.
+                      • Employing AWS Route53 to register an unique DNS to host
+                      the website. Operating under the hosted zone AWS created,
+                      the bucket that hosted the website is modified to have
+                      public access. following, a record in Route53 is created
+                      to point the DNS to the bucket. An additional bucket was
+                      created to redirect traffic.
                     </p>
                     <p>
-                      • While my resume is functioning, it's using HTTP protocol
-                      which is not secure causing a need to be resolved. To
-                      revamp my resume from HTTP to HTTPS and cache my resume in
-                      multiple edge locations.
+                      • While the website is functioning, it's using HTTP
+                      protocol which is not secure causing a need to be
+                      resolved. To revamp the website from HTTP to HTTPS and
+                      cache the website in multiple edge locations.
                     </p>
                     <p>
-                      • I created two certificates utilizing AWS Certificate
-                      Manager with the names of DNS records. After certificates
-                      were created and CNAME records were deployed in my hosted
-                      zone, then created two Distributions on AWS CloudFront
-                      using the respected certificate. Once distributions
-                      created to point to my S3 bucket, edits to the "A" records
-                      were made.
+                      • Two certificates were produced utilizing AWS Certificate
+                      Manager with the names of DNS records. Certificates were
+                      introduced and CNAME records were deployed in the hosted
+                      zone. Two Distributions on AWS CloudFront, using the
+                      respected certificate were cultivated. Each distribution
+                      was directed to the S3 bucket. "A" records were made to
+                      channeled traffic to the Distributions.
                     </p>
                   </div>
 
@@ -208,11 +208,11 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Utilizing Pulumi, I created an AWS VPC infrastructure
-                      with one public subnet and one private subnet
+                      • Utilizing Pulumi in collaboration with AWS VPC, one
+                      public subnet and one private subnet are deployed.
                     </p>
                     <p>
-                      • In this network, your instances will be connected to the
+                      • In this network, the instances will be connected to the
                       internet through the use of the public subnet, yet your
                       private instance will be protected from unauthorized
                       ingress access. Simultaneously, the instance can have
@@ -235,8 +235,8 @@
                     <p>
                       • Produced a Lambda that would integrate with
                       OpenWeatherAPI. The Lambda parses through the event data
-                      and post to a Slack channel with the location, sunrise,
-                      sunset, temperature, and the designated location.
+                      and post to a Slack channel with the sunrise, sunset,
+                      temperature, and the designated location.
                     </p>
                   </div>
                 </div>
