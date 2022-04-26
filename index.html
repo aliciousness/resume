@@ -132,31 +132,30 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Developed a bot on Slack that interacts with a school
-                      psychologist to collect, store and read information to the
-                      user. Utilizing API Gateway to communicate with the Slack
-                      bot I created I am able to use Lambda to interact with the
-                      user.
+                      • Leveraging Pulumi, I developed a bot on Slack that
+                      interacts with a school psychologist to collect, store,
+                      and relay confidential information to the consumer. The
+                      bot provides the consumer with a more efficient
+                      organizational system for deadline management. Utilizing
+                      API Gateway to communicate with the bot, I am able to use
+                      Lambda to seamlessly interact with the user.
                     </p>
                     <p>
-                      • The bot takes 3 different root commands which are
-                      followed by 2 other commands, the first and last name of
-                      the child, the user would like to retrieve, change or
-                      store.
+                      • The bot operates with three different root commands,
+                      followed by two other commands. The three commands allow
+                      for the consumer to retrieve, change, or store client
+                      information using their client's full name. Utilizing AWS
+                      DynamoDB the consumer can retrieve information such as the
+                      initial date the information was stored, sixtieth day
+                      deadline from the stored date, and the date the
+                      psycho-educational evaluation is completed.
                     </p>
-                    <p>
-                      • Utilizing DDB the user can retrieve information like the
-                      date the information was stored, 60 days from the stored
-                      date and when the report are finished.
-                    </p>
-                    <p>• I developed this project leveraging Pulumi</p>
                   </div>
 
                   <div class="job">
                     <h2>
-                      <a
-                        href="https://github.com/aliciousness/Weather-repo/tree/main/Weather"
-                        >Slack Weather Application</a
+                      <a href="https://github.com/aliciousness/new_website"
+                        >My Current Resume</a
                       >
                     </h2>
                     <!--company-->
@@ -164,14 +163,35 @@
                     <!--jobtitle-->
                     <h4></h4>
                     <!--dates-->
+
                     <p>
-                      • Created a lambda that would make a call to
-                      OpenWeatherAPI
+                      • Exercising CI/CD, AWS CodePipeline and AWS CodeBuild,
+                      the scripts from my Github repository are forwarded with
+                      each commit to the main branch and deposits HTML and CSS
+                      files into an S3 bucket.
                     </p>
                     <p>
-                      • The lambda would parse through the event and then post
-                      to a Slack channel with the location, sunrise, sunset,
-                      temp or the chosen location
+                      • Registering an unique DNS to host my resume using AWS
+                      Route53. Using the hosted zone AWS created, I continued to
+                      make the bucket that hosted my resume public while
+                      creating a record in Route53 to point the DNS to the
+                      bucket. An additional bucket was created to redirect
+                      traffic.
+                    </p>
+                    <p>
+                      • While my resume is functioning, it's using HTTP protocol
+                      which is not secure causing a need to be resolved. To
+                      revamp my resume from HTTP to HTTPS and cache my resume in
+                      multiple edge locations.
+                    </p>
+                    <p>
+                      • I created two certificates utilizing AWS Certificate
+                      Manager with the names of DNS records. After certificates
+                      were created and CNAME records were deployed in my hosted
+                      zone, then created two Distributions on AWS CloudFront
+                      using the respected certificate. Once distributions
+                      created to point to my S3 bucket, edits to the "A" records
+                      were made.
                     </p>
                   </div>
 
@@ -187,28 +207,23 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Utilizing pulumi I created an AWS VPC infrastructure
+                      • Utilizing Pulumi, I created an AWS VPC infrastructure
                       with one public subnet and one private subnet
                     </p>
                     <p>
-                      • In this network your instances will be connected to the
-                      internet through the public subnet but your private
-                      instance will be shielded from unauthorized ingress access
-                      but at the same-time can have egress access to the
-                      internet for OS updates
-                    </p>
-                    <p>
-                      • This infrasutre is both scalable and flexable with a
-                      simple change of an argument it will change the number of
-                      subnets and available ips as well as change how many
-                      availablity zones for fault tolerance
+                      • In this network, your instances will be connected to the
+                      internet through the use of the public subnet, yet your
+                      private instance will be protected from unauthorized
+                      ingress access. Simultaneously, the instance can have
+                      egress access to the internet for OS updates.
                     </p>
                   </div>
 
                   <div class="job last">
                     <h2>
-                      <a href="https://github.com/aliciousness/new_website"
-                        >This very resume</a
+                      <a
+                        href="https://github.com/aliciousness/Weather-repo/tree/main/Weather"
+                        >Slack Weather Application</a
                       >
                     </h2>
                     <!--company-->
@@ -217,46 +232,10 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Exercising CI/CD practices and using a website I created
-                      for my resume
-                    </p>
-                    <p>
-                      • I developed a CodePipeline that runs a CodeBuild project
-                      that takes the scripts from my Github repository with each
-                      commit to the main branch and puts my html and css files
-                      into an S3 bucket
-                    </p>
-                    <p>
-                      • Following, I register a unique dns to host my resume
-                      using route53.
-                    </p>
-                    <p>
-                      • Using the hosted zone AWS created for that dns, I then
-                      continued to make the bucket that hosted my resume public,
-                      and creating an A record in route53 to point that dns to
-                      my bucket. As well as creating another bucket to redirect
-                      traffic for another record name (www.richardcraddock.me)
-                    </p>
-                    <p>
-                      • After both buckets are created, and both records point
-                      to my bucket hosting my resume. The resume is up but it is
-                      using HTTP protocol which is not sercure, this needed to
-                      be fixed.
-                    </p>
-                    <p>
-                      • To change my resume to HTTP to HTTPS and cache my resume
-                      in multiple edge locations. AWS cloudfront be right for
-                      the job. First, I had to create two certificates utilizing
-                      Certificate Manager with the names of both dns records.
-                      After certificates created and CNAME records deployed in
-                      my hosted zone. I then created two Distributions on
-                      CloudFront using the respected certificate.
-                    </p>
-                    <p>
-                      • Once distributions created and they point to my s3
-                      bucket. Next, i had to edit the A records to point to each
-                      distributions. Finally, i changed the redirection on
-                      www.richardcraddock.me bucket from http to https
+                      • Produced a Lambda that would integrate with
+                      OpenWeatherAPI. The Lambda parses through the event data
+                      and post to a Slack channel with the location, sunrise,
+                      sunset, temperature, and the designated location.
                     </p>
                   </div>
                 </div>

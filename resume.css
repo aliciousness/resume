@@ -134,8 +134,8 @@ a#pdf:hover {
 
 .job {
   position: relative;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 .job h4 {
@@ -145,6 +145,7 @@ a#pdf:hover {
 }
 .job p {
   margin: 0.75em 0 3em 0;
+  padding-bottom: -3px;
 }
 
 .last {
@@ -187,8 +188,8 @@ a#pdf:hover {
 }
 .yui-gf div.first {
   width: 12.3%;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .edu {
