@@ -43,7 +43,9 @@
         <div id="bd">
           <div id="yui-main">
             <div class="yui-b">
-              <div class="yui-gf">
+  <!-- IMPORTANT
+              < class="yui-gf">
+                
                 <div class="yui-u first">
                   <h2>Profile</h2>
                 </div>
@@ -51,8 +53,10 @@
                   <p class="enlarge">TODO: REMEMBER IMPORTANT NOTE</p>
                   <!--Progressively evolve cross-platform ideas before impactful infomediaries. Energistically visualize tactical initiatives before cross-media catalysts for change.-->
                 </div>
-              </div>
+              </div> 
+          
               <!--// .yui-gf -->
+              
               <!--
               <div class="yui-gf">
                 <div class="yui-u first">
@@ -85,12 +89,13 @@
                   </div>
                 </div>
               </div>
-			-->
+		IMPORTANT	
+  --> 
               <!--// .yui-gf -->
 
               <div class="yui-gf">
                 <div class="yui-u first">
-                  <h2>Technical</h2>
+                  <h2>Technical Stack</h2>
                 </div>
                 <div class="yui-u">
                   <ul class="talent">
@@ -121,7 +126,7 @@
                 <!--// .yui-u -->
 
                 <div class="yui-u">
-                  <br class="job">
+                  <div class="job">
                     <h2>
                       <a href="https://github.com/aliciousness/caseyProject"
                         >Slack Psychologist Data Collection Application</a
@@ -132,24 +137,21 @@
                     <!--jobtitle-->
                     <h4></h4>
                     <!--dates-->
-                    <br>
+                      <br/>
                       • Leveraging Pulumi, developed a bot on Slack that
                       interacts with a school psychologist to collect, store,
-                      and relay confidential information to the consumer. <br>• The
-                      bot provides the consumer with a more efficient
-                      organizational system for deadline management.</br> <br>• Utilizing
+                      and relay confidential information to the consumer.
+                      <br /><br />
+                      • The bot provides the consumer with a more efficient
+                      organizational system for deadline management. <br/><br/>
+                      • Utilizing
                       API Gateway to communicate with the bot, AWS Lambda is
-                      able to seamlessly interact with the user.</br>
-                    </p>
-                    <p>
+                      able to seamlessly interact with the user. <br/><br/>
                       • The bot operates with three different root commands,
-                      followed by two other commands. The three commands allow
-                      for the consumer to retrieve, change, or store client
-                      information using their client's full name. Applying AWS
-                      DynamoDB, the consumer can retrieve information such as
-                      the initial date the information was stored, sixtieth day
-                      deadline from the stored date, and the date the
-                      psycho-educational evaluation is completed.
+                      followed by two other commands.<br/><br/> 
+                      • Applying AWS
+                      DynamoDB, the consumer can retrieve information for the
+                      psycho-educational evaluation.
                     </p>
                   </div>
 
@@ -166,37 +168,51 @@
                     <!--dates-->
 
                     <p>
-                      • Exercising CI/CD, AWS CodePipeline and AWS CodeBuild,
+                      • Exercising CI/CD,
                       the scripts from a Github repository are forwarded with
                       each commit to the main branch and deposits HTML and CSS
-                      files into an S3 bucket.
-                    </p>
-                    <p>
+                      files into an S3 bucket.<br/><br/>
                       • Employing AWS Route53 to register an unique DNS to host
-                      the website. Operating under the hosted zone AWS created,
-                      the bucket that hosted the website is modified to have
-                      public access. following, a record in Route53 is created
+                      the website. <br/><br/>
+                      • Operating under the hosted zone AWS created,
+                      the bucket is then changed to public access for static web hosting.<br/><br/> 
+                      • Records were created
                       to point the DNS to the bucket. An additional bucket was
-                      created to redirect traffic.
-                    </p>
-                    <p>
-                      • While the website is functioning, it's using HTTP
-                      protocol which is not secure causing a need to be
-                      resolved. To revamp the website from HTTP to HTTPS and
-                      cache the website in multiple edge locations.
-                    </p>
-                    <p>
+                      created to redirect traffic. <br/><br/>
                       • Two certificates were produced utilizing AWS Certificate
-                      Manager with the names of DNS records. Certificates were
+                      Manager with the names of DNS records. <br/><br/> 
+                      • Certificates were
                       introduced and CNAME records were deployed in the hosted
-                      zone. Two Distributions on AWS CloudFront, using the
+                      zone.<br/><br/> 
+                      • Two Distributions with AWS CloudFront; using the
                       respected certificate were cultivated. Each distribution
-                      was directed to the S3 bucket. "A" records were made to
-                      channeled traffic to the Distributions.
+                      was directed to the S3 bucket. <br/><br/> 
+                      • "A" records were made to channel traffic to the Distributions.
                     </p>
                   </div>
 
                   <div class="job">
+                    <h2>
+                      <a
+                      href="https://github.com/aliciousness/Weather-repo/tree/main/Weather"
+                      >Slack Weather Application</a
+                    >
+                    </h2>
+                    <!--company-->
+                    <h3></h3>
+                    <!--jobtitle-->
+                    <h4></h4>
+                    <!--dates-->
+                    <p>
+                      • Produced a Lambda that would integrate with
+                      OpenWeatherAPI. <br/><br/>
+                      • The Lambda parses through the event data
+                      and post to a Slack channel with the sunrise, sunset,
+                      temperature, and the designated location.
+                    </p>
+                  </div>
+
+                  <div class="job last">
                     <h2>
                       <a href="https://github.com/aliciousness/VPC_prac"
                         >Created VPC infrastructure</a
@@ -209,34 +225,12 @@
                     <!--dates-->
                     <p>
                       • Utilizing Pulumi in collaboration with AWS VPC, one
-                      public subnet and one private subnet are deployed.
-                    </p>
-                    <p>
-                      • In this network, the instances will be connected to the
-                      internet through the use of the public subnet, yet your
-                      private instance will be protected from unauthorized
-                      ingress access. Simultaneously, the instance can have
+                      public subnet and one private subnet are deployed.<br/><br/>
+                      • In this network, public instances will be connected to the internet through the use of the Internet Gateway. <br/><br/>
+                      • Private instance will be protected from unauthorized
+                      ingress access. <br/><br/>
+                      • Simultaneously, private instances can have
                       egress access to the internet for OS updates.
-                    </p>
-                  </div>
-
-                  <div class="job last">
-                    <h2>
-                      <a
-                        href="https://github.com/aliciousness/Weather-repo/tree/main/Weather"
-                        >Slack Weather Application</a
-                      >
-                    </h2>
-                    <!--company-->
-                    <h3></h3>
-                    <!--jobtitle-->
-                    <h4></h4>
-                    <!--dates-->
-                    <p>
-                      • Produced a Lambda that would integrate with
-                      OpenWeatherAPI. The Lambda parses through the event data
-                      and post to a Slack channel with the sunrise, sunset,
-                      temperature, and the designated location.
                     </p>
                   </div>
                 </div>
