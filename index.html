@@ -129,7 +129,7 @@
                   <div class="job">
                     <h2>
                       <a href="https://github.com/aliciousness/caseyProject"
-                        >Slack Psychologist Data Collection Application</a
+                        >Slack Reporting Application</a
                       >
                     </h2>
                     <!--company-->
@@ -138,25 +138,18 @@
                     <h4></h4>
                     <!--dates-->
                       <br/>
-                      • Used Pulumi to create IaC <list the AWS pieces> for a psycho-educational evaluation slack app.
-                      <br /><br />
-                      • The bot provides the consumer with a more efficient
-                      organizational system for deadline management. <br/><br/>
-                      • Utilizing
-                      API Gateway to communicate with the bot, AWS Lambda is
-                      able to seamlessly interact with the user. <br/><br/>
-                      • The bot operates with three different root commands,
-                      followed by two other commands.<br/><br/> 
-                      • Applying AWS
-                      DynamoDB, the consumer can retrieve information for the
-                      psycho-educational evaluation.
+                      • Infrastructure as code (IaC) using Pulumi/Python
+                      <br/><br/>
+                      • Designed a Slack App powered by a serverless backend; AWS Lambdas, API Gateway, and DynamoDB
+                      <br/><br/>
+                      • Wrote an AWS Lambda using Python/Boto3 to process incoming Slack commands and store/administer data<br/><br/> 
                     </p>
                   </div>
 
                   <div class="job">
                     <h2>
                       <a href="https://github.com/aliciousness/new_website"
-                        >My Current Resume</a
+                        >Current Resume</a
                       >
                     </h2>
                     <!--company-->
@@ -166,26 +159,11 @@
                     <!--dates-->
 
                     <p>
-                      • Exercising CI/CD,
-                      the scripts from a Github repository are forwarded with
-                      each commit to the main branch and deposits HTML and CSS
-                      files into an S3 bucket.<br/><br/>
-                      • Employing AWS Route53 to register an unique DNS to host
-                      the website. <br/><br/>
-                      • Operating under the hosted zone AWS created,
-                      the bucket is then changed to public access for static web hosting.<br/><br/> 
-                      • Records were created
-                      to point the DNS to the bucket. An additional bucket was
-                      created to redirect traffic. <br/><br/>
-                      • Two certificates were produced utilizing AWS Certificate
-                      Manager with the names of DNS records. <br/><br/> 
-                      • Certificates were
-                      introduced and CNAME records were deployed in the hosted
-                      zone.<br/><br/> 
-                      • Two Distributions with AWS CloudFront; using the
-                      respected certificate were cultivated. Each distribution
-                      was directed to the S3 bucket. <br/><br/> 
-                      • "A" records were made to channel traffic to the Distributions.
+                      • Administered IaC with Pulumi and Python <br/><br/>
+                      • Designed and implemented a CI/CD pipeline using GitHub, AWS CodeStarConnect, AWS Codebuild, AWS CodePipeline, and S3. <br/><br/>
+                      • Registered a unique DNS for the website utilizing AWS Route53. <br/><br/>
+                      • Brought the website to the internet by applying AWS Certificate Manager and AWS CloudFront. <br/><br/> 
+                      • Used a template HTML resume to design and modify to my needs for a elegant front-end. <br/><br/> 
                     </p>
                   </div>
 
@@ -202,18 +180,17 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Produced a Lambda that would integrate with
-                      OpenWeatherAPI. <br/><br/>
-                      • The Lambda parses through the event data
-                      and post to a Slack channel with the sunrise, sunset,
-                      temperature, and the designated location.
+                      • Capitalizing on AWS serverless Lambda to interact with OpenWeatherAPI <br/><br/>
+                      • In combination with Python Time module, and boto3 to post to a Slack channel with the sunrise, sunset,
+                      temperature, and the designated location. <br/><br/>
+                      • Employed Git to leverage version control.
                     </p>
                   </div>
 
                   <div class="job last">
                     <h2>
                       <a href="https://github.com/aliciousness/VPC_prac"
-                        >Created VPC infrastructure</a
+                        >VPC infrastructure</a
                       >
                     </h2>
                     <!--company-->
@@ -222,13 +199,10 @@
                     <h4></h4>
                     <!--dates-->
                     <p>
-                      • Utilizing Pulumi in collaboration with AWS VPC, one
-                      public subnet and one private subnet are deployed.<br/><br/>
-                      • In this network, public instances will be connected to the internet through the use of the Internet Gateway. <br/><br/>
-                      • Private instance will be protected from unauthorized
-                      ingress access. <br/><br/>
-                      • Simultaneously, private instances can have
-                      egress access to the internet for OS updates.
+                      • Defined a virtual network through Pulumi in partnership with AWS VPC and AWS Systems Manager. <br/><br/>
+                      • Deployed Public and private subnet resources in designated availability zone.<br/><br/>
+                      • Recruiting AWS EC2, to set egress and ingress access and spin up virtual computing environments.  <br/><br/>
+                       
                     </p>
                   </div>
                 </div>
