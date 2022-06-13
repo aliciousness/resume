@@ -82,7 +82,9 @@ h4 {
   color: #333;
 }
 p {
-  font-size: 100%;
+  font-size: 12.5pt;
+  text-align-last: auto;
+  /* font-size: 100%; */
   line-height: 18px;
   padding-right: 3em;
 }
@@ -96,6 +98,7 @@ strong {
   font-weight: bold;
 }
 li {
+  font-size: 13pt;
   line-height: 24px;
   border-bottom: 1px solid #ccc;
 }
@@ -168,10 +171,14 @@ a#pdf:hover {
   width: 100%;
   float: left;
 }
-li {
-  /* font-size: 13px; */
+.talent li {
   font-weight: 500;
   text-align-last: auto;
+  /* font-size: 12pt; */
+}
+
+.talent_last {
+  padding-top: 13px;
 }
 .center {
   text-align: center;
