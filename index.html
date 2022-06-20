@@ -4,14 +4,42 @@
     <title>Richard Craddock | craddock9richard@gmail.com</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
+    <!--------tags
+    --------------------------------------------------------------->
     <meta name="keywords" content="Richard Craddock" />
     <meta name="keywords" content="Richard" />
     <meta name="keywords" content="Craddock" />
     <meta name="description" content="This is a resume for Richard Craddock" />
 
-    <link rel="stylesheet" type="text/css" href="reset.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+    <!-------- favicons
+    --------------------------------------------------------------->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+    <!--------CSS
+    --------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/resume.css" media="all" />
   </head>
+
+  <!--------HOW TO FIND ME / CONTACT INFO
+    --------------------------------------------------------------->
   <body>
     <div id="doc2" class="yui-t7">
       <div id="inner">
@@ -26,29 +54,51 @@
               <div class="contact-info">
                 <!-- <h3><a id="pdf" href="#">Download PDF</a></h3> -->
                 <h3>
-                  <a href="mailto:craddock9richard@gmail.com"
-                    >craddock9richard@gmail.com</a
-                  >
+                  <a href="mailto:craddock9richard@gmail.com" target="_blank"
+                    ><img 
+                    src= "images/email.png"
+                    alt="icon for gmail"
+                    class="fab" 
+                    aria-hidden="true"
+                    width="5"
+                    height="6"></img
+                  ></a>
                 </h3>
-                <h3>(610) - 674-9272</h3>
+                
                 <h3>
-                  <a href="https://www.github.com/aliciousness"
-                    >github.com/aliciousness</a
-                  >
+                  <a 
+                  href="https://www.github.com/aliciousness" target="_blank"
+                    ><img 
+                    src ="images/github-icon.png"
+                    alt= "github logo/icon"
+                    class="fab" 
+                    aria-hidden="true"
+                    width="5"
+                    height="6">
+                    </img
+                  ></a>
                 </h3>
                 <h3>
-                  <a href="https://www.linkedin.com/in/richard-craddock-"
-                    >linkedin.com/in/richard-craddock-</a
-                  >
+                  <a
+                    href="https://www.linkedin.com/in/richard-craddock-"
+                    target="_blank"
+                    ><img
+                      src="images/linkedin-icon.png"
+                      alt="linkedin logo/icon"
+                      class="fab"
+                      aria-hidden="true"
+                      width="5"
+                    height="6"
+                    ></img
+                  ></a>
                 </h3>
-
+                
                 <h3>
-                  <a href="resume.pdf" download="Richard_Craddock_Resume">
-                    <button id="myButton" class="button">
-                      Download Resume
-                    </button>
+                  <a href="cv/resume.pdf" download="Richard_Craddock_Resume">
+                    <button id="myButton" class="button">Download CV</button>
                   </a>
                 </h3>
+                <h3 class = "number">(610) - 674-9272</h3>
               </div>
               <!--// .contact-info -->
             </div>
@@ -57,6 +107,8 @@
         </div>
         <!--// hd -->
 
+        <!--------ABOUT ME
+          --------------------------------------------------------------->
         <div id="bd">
           <div id="yui-main">
             <div class="yui-b">
@@ -81,6 +133,8 @@
 
               <!--// .yui-gf -->
 
+              <!--------SKILLS
+                --------------------------------------------------------------->
               <div class="yui-gf">
                 <div class="yui-u first">
                   <h2>Skills</h2>
@@ -121,6 +175,8 @@
 
               <!--// .yui-gf -->
 
+              <!--------Technical Stack
+                --------------------------------------------------------------->
               <div class="yui-gf">
                 <div class="yui-u first">
                   <h2>Technical Stack</h2>
@@ -153,6 +209,8 @@
                 </div>
                 <!--// .yui-u -->
 
+                <!--------Experience
+                  --------------------------------------------------------------->
                 <div class="yui-u">
                   <div class="job">
                     <h2>
@@ -171,14 +229,15 @@
                       • Collaborated with team to understand and provide
                       infrastructure needs for development and production
                       environments <br /><br />
-                      • Designed autonomous templates for reusability; region,
-                      environment, variables, etc
+                      • Designed autonomous templates for reusability, For
+                      example but not limited but not limited to
+                      region,environment, variables, etc
                     </p>
                   </div>
                   <div class="job">
                     <h2>
                       <a href="https://github.com/aliciousness/caseyProject"
-                        >Slack Reporting Application</a
+                        >Slack CRUD Application</a
                       >
                     </h2>
                     <!--company-->
@@ -189,10 +248,10 @@
                     <p>
                       • Infrastructure as code (IaC) using Pulumi/Python
                       <br /><br />
-                      • Designed a Slack App powered by a serverless backend;
-                      AWS Lambdas, API Gateway, and DynamoDB
+                      • Designed a Slack App powered by a serverless backend
+                      implementing AWS Lambdas, API Gateway, and DynamoDB
                       <br /><br />
-                      • Wrote an AWS Lambda using Python/Boto3 to process
+                      • Wrote Python scripts utilizing SDK Boto3 to process
                       incoming Slack commands and store/administer data<br /><br />
                     </p>
                   </div>
@@ -269,6 +328,8 @@
               </div>
               <!--// .yui-gf -->
 
+              <!--------Education
+                --------------------------------------------------------------->
               <div class="yui-gf last">
                 <div class="yui-u first">
                   <h2>Education</h2>
@@ -305,19 +366,44 @@
         </div>
         <!--// bd -->
 
+        <!--------footer
+            --------------------------------------------------------------->
         <div id="ft">
           <p>
-            Richard Craddock &mdash;
-            <a href="mailto:craddock9richard@gmail.com"
-              >craddock9richard@gmail.com
-            </a>
-            &mdash; (610) - 674-9272 &mdash;
-            <a href="https://github.com/aliciousness">GitHub/aliciousness</a>
-            &mdash;
-            <a href="https://www.linkedin.com/in/richard-craddock-"
-              >linkedin.com/in/richard-craddock-</a
-            >
-            &mdash; V3.2
+            Richard Craddock 
+            <a href="mailto:craddock9richard@gmail.com" target="_blank"
+                    ><img 
+                    src= "images/email.png"
+                    alt="icon for gmail"
+                    class="bottom email" 
+                    aria-hidden="true"
+                    width="5"
+                    height="6"></img
+                  ></a> 
+            <a 
+                  href="https://www.github.com/aliciousness" target="_blank"
+                    ><img 
+                    src ="images/github-icon.png"
+                    alt= "github logo/icon"
+                    class="bottom github" 
+                    aria-hidden="true"
+                    width="5"
+                    height="6">
+                    </img
+                  ></a>
+            <a
+                    href="https://www.linkedin.com/in/richard-craddock-"
+                    target="_blank"
+                    ><img
+                      src="images/linkedin-icon.png"
+                      alt="linkedin logo/icon"
+                      class="bottom linkedin"
+                      aria-hidden="true"
+                      width="5"
+                    height="6"
+                    ></img
+                  ></a>
+            (610).674.9272 &mdash; V4.0
             <!-- UPDATE VERSION NOTE IMPORTANT REMEMBER-->
           </p>
         </div>
