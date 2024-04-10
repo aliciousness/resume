@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Include padding and borders in the element's total width and height */
+}
+
+html {
+    overflow-y: scroll;
+    /* Always show vertical scroll to avoid jumpy behavior */
+}
+
+body {
+    line-height: 0;
+    /* Removes any space due to line height */
+    background-color: #000;
+    /* In case the image is shorter than the page */
+    overflow-x: hidden;
+    /* Hide horizontal scroll */
+}
+
+#fullpage-bg {
+    display: block;
+    /* Removes any space below the image which is common with inline elements */
+    width: 100vw;
+    /* Set the width to 100% of the viewport width */
+    height: auto;
+    /* Set height automatically based on the width, maintaining the aspect ratio */
+    position: absolute;
+    /* Absolute position will remove it from the normal flow and avoid pushing other elements */
+    top: 0;
+    /* Position the image right at the top */
+    left: 0;
+    /* Position the image starting from the left */
+    z-index: -1;
+
+    /* Zoom out effect */
+    transform: scale(.95);
+    /* Adjust the scale value to zoom out, 1 is natural size, less than 1 is zoomed out */
+    transform-origin: 50% 50%;
+    /* Ensure the image is zoomed out from its center */
+}
+
+#maintenance-message {
+    position: fixed;
+    /* Keep it in view while scrolling */
+    top: 50%;
+    /* Adjust this value to position the message lower on the screen */
+    width: 100%;
+    /* Take full width of the container */
+    text-align: center;
+    z-index: 1000;
+    /* Above the image */
+    transform: translateY(-50%);
+    /* Adjust vertically to center based on element's height */
+}
+
+#maintenance-message h1 {
+    color: rgb(237, 195, 7);
+    font-style: italic;
+    font-size: 2em;
+    /* Example size, adjust as needed */
+    margin-bottom: 1em;
+    /* Adds space below the h1 */
+}
+
+#maintenance-message p {
+    color: rgb(237, 195, 7);
+    font-style: italic;
+    font-size: 1em;
+    /* Example size, adjust as needed */
+    margin-top: 1em;
+    /* Adds space above the p */
+}
