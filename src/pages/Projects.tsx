@@ -6,7 +6,7 @@ function Projects() {
     {
       title: 'Cloud Infrastructure Automation',
       description: 'Developed comprehensive IaC templates using Pulumi with Python for multi-region AWS infrastructure, including S3, Route53 and cloudFront.',
-      image: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80',
+      image: 'images/project-js-pipeline.avif',
       technologies: ['Pulumi', 'AWS', 'S3', 'Route53', 'CloudFront'],
       githubUrl: 'https://github.com/aliciousness/new_website',
       liveUrl: 'https://github.com/aliciousness/new_website/blob/main/README.md',
@@ -14,7 +14,7 @@ function Projects() {
     {
       title: 'Custom Github workflow integration',
       description: 'Implemented custom GitHub actions for numerous pipeline integrations.',
-      image: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+      image: 'images/project-github.avif',
       technologies: ['GitHub Actions', 'AWS', 'Docker', 'Teams'],
       githubUrl: 'https://github.com/aliciousness/teams-notifier',
       liveUrl: 'https://github.com/aliciousness/teams-notifier/blob/main/Readme.md',
@@ -22,7 +22,7 @@ function Projects() {
     {
       title: 'Web Application',
       description: 'Built a web application using Next.js and Tailwind CSS for a personal project.',
-      image: 'https://images.unsplash.com/photo-1523726491678-bf852e717f6a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'images/project-web-application.avif',
       technologies: ['Next.js', 'Tailwind CSS', 'S3', 'CodePipeline'],
       githubUrl: 'https://github.com/aliciousness/resume',
       liveUrl: 'https://richardcraddock.me'
@@ -30,7 +30,7 @@ function Projects() {
     {
       title: 'Ansible Playbooks for my home lab',
       description: 'Created Ansible playbooks to automate the setup of my home lab servers.',
-      image: 'https://images.unsplash.com/photo-1520869562399-e772f042f422?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: 'images/project-home-lab.avif',
       technologies: ['Ansible', 'Linux'],
       githubUrl: 'https://github.com/aliciousness/ansible-homelab',
       liveUrl: '#' // No documentation available
