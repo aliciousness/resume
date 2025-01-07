@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Login from './pages/Login';
 
 function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -28,6 +29,7 @@ function AppContent() {
                 <Link to="/resume" className={`${isDark ? 'dark:text-gray-300 dark:hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}>Resume</Link>
                 <Link to="/projects" className={`${isDark ? 'dark:text-gray-300 dark:hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}>Projects</Link>
                 <Link to="/contact" className={`${isDark ? 'dark:text-gray-300 dark:hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}>Contact</Link>
+                <Link to="/Login" className={`${isDark ? 'dark:text-gray-300 dark:hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}>Login</Link>
                 <button
                   onClick={toggleTheme}
                   className={`p-2 rounded-lg ${isDark ? 'dark:text-gray-300 dark:hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
@@ -84,6 +86,13 @@ function AppContent() {
                 >
                   Contact
                 </Link>
+                <Link
+                  to="/Login"
+                  className={`block px-3 py-2 text-base font-medium ${isDark ? 'dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Login
+                </Link>
               </div>
             </div>
           )}
@@ -95,6 +104,7 @@ function AppContent() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/Login" element={<Login />} />
           </Routes>
         </main>
 
