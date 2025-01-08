@@ -1,11 +1,17 @@
-property of Richard Craddock
+Looks like you might be lost?
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>404 - Page Not Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --neon-color: #0ff;
+      --grid-color: rgba(0, 255, 255, 0.1);
+    }
+
     body {
       margin: 0;
       height: 100vh;
@@ -16,53 +22,85 @@ property of Richard Craddock
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+      position: relative;
     }
-    .gundam-container {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-    .gundam-container img {
-      max-width: 400px;
-      height: auto;
-      opacity: 0.8;
-    }
-    .scrolling-wrapper {
-      position: fixed;
-      top: 50%;
-      width: 100%;
-      height: 50px;
-      overflow: hidden;
-      z-index: 2;
-    }
-    .scrolling-text {
+
+    /* Animated grid background */
+    body::before {
+      content: '';
       position: absolute;
-      white-space: nowrap;
-      animation: scroll-text 15s linear infinite;
-      font-size: 2rem;
-      width: 100%;
-      text-align: center;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(var(--grid-color) 1px, transparent 1px),
+                  linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: gridMove 20s linear infinite;
+      transform-origin: center;
+      z-index: -1;
     }
-    @keyframes scroll-text {
-      from {
-        transform: translateX(100%);
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      text-shadow: 0 0 10px var(--neon-color),
+                   0 0 20px var(--neon-color),
+                   0 0 30px var(--neon-color);
+      animation: glitch 1s linear infinite;
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      text-shadow: 0 0 5px var(--neon-color);
+    }
+
+    .home-button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: transparent;
+      border: 2px solid var(--neon-color);
+      color: var(--neon-color);
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 0 0 5px var(--neon-color);
+      box-shadow: 0 0 10px var(--neon-color);
+    }
+
+    .home-button:hover {
+      background: var(--neon-color);
+      color: #000;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-50%) rotate(5deg); }
+    }
+
+    @keyframes glitch {
+      0% { transform: skew(0deg); }
+      20% { transform: skew(2deg); }
+      40% { transform: skew(-2deg); }
+      60% { transform: skew(1deg); }
+      80% { transform: skew(-1deg); }
+      100% { transform: skew(0deg); }
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 4rem;
       }
-      to {
-        transform: translateX(-100%);
+      .error-message {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="gundam-container">
-    <img src="images/maintenance-gundam.png" alt="Maintenance Gundam">
-  </div>
-  <div class="scrolling-wrapper">
-    <div class="scrolling-text">
-      ahhh... I think you're a bit lost
-    </div>
-  </div>
+  <div class="error-code">404</div>
+  <div class="error-message">SYSTEM MALFUNCTION - PAGE NOT FOUND</div>
+  <a href="/" class="home-button">Return to Base</a>
 </body>
 </html>

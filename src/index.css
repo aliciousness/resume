@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --grid-color: rgba(20, 184, 166, 0.1);
+}
+
 /* src/index.css */
 .text-custom-blue {
   color: #3A9EC8;
