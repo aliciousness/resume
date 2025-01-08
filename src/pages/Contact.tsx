@@ -39,7 +39,7 @@ function Contact() {
             Get in Touch
           </h1>
           <p className="mt-4 text-xl text-gray-300">
-            Let's discuss whats next!
+            Let's discuss what's next!
           </p>
         </motion.div>
 
@@ -51,7 +51,7 @@ function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm shadow-xl"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="group">
                 <label className="block text-sm font-medium text-gray-200">
                   Name
@@ -59,7 +59,6 @@ function Contact() {
                 <input
                   type="text"
                   name="name"
-                  id="name"
                   value={formData.name}
                   onChange={handleChange}
                   className="mt-1 block w-full rounded-lg border-gray-600 bg-gray-700/50 text-white shadow-sm focus:border-turquoise-500 focus:ring-turquoise-500 transition-all duration-200"
@@ -74,7 +73,6 @@ function Contact() {
                 <input
                   type="email"
                   name="email"
-                  id="email"
                   value={formData.email}
                   onChange={handleChange}
                   className="mt-1 block w-full rounded-lg border-gray-600 bg-gray-700/50 text-white shadow-sm focus:border-turquoise-500 focus:ring-turquoise-500 transition-all duration-200"
@@ -88,11 +86,10 @@ function Contact() {
                 </label>
                 <textarea
                   name="message"
-                  id="message"
-                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   className="mt-1 block w-full rounded-lg border-gray-600 bg-gray-700/50 text-white shadow-sm focus:border-turquoise-500 focus:ring-turquoise-500 transition-all duration-200"
+                  rows={4}
                   required
                 />
               </div>
@@ -148,7 +145,7 @@ function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-white">Location</h3>
-                  <p className="mt-1 text-gray-300">Allentown, PA</p>
+                  <p className="mt-1 text-gray-300">Allentown, Pennsylvania</p>
                 </div>
               </div>
             </div>

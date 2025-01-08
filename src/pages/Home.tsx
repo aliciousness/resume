@@ -8,11 +8,11 @@ function Home() {
     <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen">
       <div className="relative overflow-hidden">
         {/* Animated background pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-10 z-0">
           <div className="absolute inset-0 bg-grid-pattern animate-grid" />
         </div>
 
-        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
+        <main className="relative z-10 mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             {/* Left Column - Text Content */}
             <div className="sm:text-center lg:text-left lg:col-span-6">
@@ -41,32 +41,22 @@ function Home() {
                 </motion.p>
 
                 <div className="mt-8 flex flex-col sm:flex-row sm:gap-6 lg:justify-start">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto"
-                  >
-                    <Link
-                      to="/projects"
-                      className="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg text-white bg-gradient-to-r from-turquoise-500 to-turquoise-700 hover:from-turquoise-600 hover:to-turquoise-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  <Link to="/projects" className="w-full sm:w-auto">
+                    <div
+                      className="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg text-white bg-gradient-to-r from-turquoise-500 to-turquoise-700 hover:from-turquoise-600 hover:to-turquoise-800 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
                     >
                       <span>View My Work</span>
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </motion.div>
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </div>
+                  </Link>
 
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto"
-                  >
-                    <Link
-                      to="/contact"
-                      className="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg text-turquoise-100 border-2 border-turquoise-500 hover:bg-turquoise-500/10 transition-all duration-200"
+                  <Link to="/contact" className="w-full sm:w-auto">
+                    <div
+                      className="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg text-turquoise-100 border-2 border-turquoise-500 hover:bg-turquoise-500/10 transition-all duration-200 cursor-pointer"
                     >
                       Contact Me
-                    </Link>
-                  </motion.div>
+                    </div>
+                  </Link>
                 </div>
               </motion.div>
             </div>
