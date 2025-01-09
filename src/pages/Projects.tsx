@@ -1,7 +1,9 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 function Projects() {
+  const { isDark } = useTheme();
   const projects = [
     {
       title: 'Cloud Infrastructure Automation',
@@ -38,10 +40,18 @@ function Projects() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <div className={`max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 ${
+      isDark ? 'bg-gray-900' : 'bg-white'
+    }`}>
       <div className="text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">DevOps Projects</h2>
-        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+        <h2 className={`text-3xl font-extrabold ${
+          isDark ? 'text-white' : 'text-gray-900'
+        } sm:text-4xl`}>
+          Projects
+        </h2>
+        <p className={`mt-3 max-w-2xl mx-auto text-xl ${
+          isDark ? 'text-gray-300' : 'text-gray-500'
+        } sm:mt-4`}>
           Showcasing infrastructure and automation solutions
         </p>
       </div>

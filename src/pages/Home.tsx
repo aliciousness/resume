@@ -2,17 +2,27 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext'; // Fix import path
 
 function Home() {
+  const { isDark } = useTheme();
+  
   return (
-    <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen">
+    <div className={`relative min-h-screen ${
+      isDark 
+        ? 'bg-gradient-to-b from-gray-900 to-gray-800' 
+        : 'bg-gradient-to-b from-gray-100 to-gray-200'
+    }`}>
       <div className="relative overflow-hidden">
-        {/* Animated background pattern */}
         <div className="absolute inset-0 opacity-10 z-0">
-          <div className="absolute inset-0 bg-grid-pattern animate-grid" />
+          <div className={`absolute inset-0 bg-grid-pattern animate-grid ${
+            isDark ? 'opacity-20' : 'opacity-40'
+          }`} />
         </div>
 
-        <main className="relative z-10 mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
+        <main className={`relative z-10 mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 ${
+          isDark ? 'text-white' : 'text-gray-900'
+        }`}>
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             {/* Left Column - Text Content */}
             <div className="sm:text-center lg:text-left lg:col-span-6">
@@ -25,7 +35,7 @@ function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl"
+                  className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl"
                 >
                   <span className="block">Hi, I'm Richard</span>
                   <span className="block text-turquoise-400">DevOps Engineer</span>
@@ -35,7 +45,7 @@ function Home() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0"
+                  className="mt-3 text-base sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0"
                 >
                   Welcome to my little hub
                 </motion.p>
@@ -52,7 +62,11 @@ function Home() {
 
                   <Link to="/contact" className="w-full sm:w-auto">
                     <div
-                      className="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg text-turquoise-100 border-2 border-turquoise-500 hover:bg-turquoise-500/10 transition-all duration-200 cursor-pointer"
+                      className={`w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 text-lg font-medium rounded-lg ${
+                        isDark 
+                          ? 'text-turquoise-100 border-2 border-turquoise-500 hover:bg-turquoise-500/10' 
+                          : 'text-turquoise-700 border-2 border-turquoise-500 hover:bg-turquoise-500/10'
+                      } transition-all duration-200 cursor-pointer`}
                     >
                       Contact Me
                     </div>
