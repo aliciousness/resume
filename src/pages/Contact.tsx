@@ -2,17 +2,42 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
-function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log(formData);
+    setIsSubmitting(true);
+    const api_url = process.env.API_GATEWAY_URL || 'https://your-api-gateway-url.execute-api.region.amazonaws.com/prod/contact';
+    const api_key = process.env.API_GATEWAY_KEY || 'your-api-key';
+    const header = process.env.API_GATEWAY_HEADER || 'contact-form';
+    try {
+      const response = await fetch(api_url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Custom-Header': header,
+          'x-api-key': api_key
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) throw new Error('Failed to send message');
+
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -99,9 +124,12 @@ function Contact() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg text-lg font-medium text-white bg-gradient-to-r from-turquoise-500 to-turquoise-700 hover:from-turquoise-600 hover:to-turquoise-800 shadow-lg hover:shadow-xl transition-all duration-200"
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
+              {submitStatus === 'success' && <p className="text-green-500 mt-2">Message sent successfully!</p>}
+              {submitStatus === 'error' && <p className="text-red-500 mt-2">Failed to send message. Please try again.</p>}
             </form>
           </motion.div>
 
