@@ -14,8 +14,8 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const api_url = process.env.API_GATEWAY_URL || 'https://your-api-gateway-url.execute-api.region.amazonaws.com/prod/contact';
-    const api_key = process.env.API_GATEWAY_KEY || 'your-api-key';
+    const api_url = process.env.API_GATEWAY_URL || 'https://api-gateway-url.execute-api.region.amazonaws.com/prod/contact';
+    const api_key = process.env.API_GATEWAY_KEY || 'api-key';
     const header = process.env.API_GATEWAY_HEADER || 'contact-form';
     try {
       const response = await fetch(api_url, {
@@ -67,8 +67,9 @@ const Contact = () => {
             Let's discuss what's next!
           </p>
         </motion.div>
-
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Original Contact Form layout */}
+        {/* <div className="mt-12 grid grid-cols-1 gap-8 max-w-xl mx-auto"> */}
+        <div className="mt-12 grid grid-cols-1 gap-8 max-w-xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -140,6 +141,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="lg:pl-8"
           >
+            {/* Leaving commented out because the contact info is not being used currently
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
@@ -176,7 +178,7 @@ const Contact = () => {
                   <p className="mt-1 text-gray-300">Allentown, Pennsylvania</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>
