@@ -14,16 +14,13 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const api_url = process.env.API_GATEWAY_URL || 'https://api-gateway-url.execute-api.region.amazonaws.com/prod/contact';
-    const api_key = process.env.API_GATEWAY_KEY || 'api-key';
-    const header = process.env.API_GATEWAY_HEADER || 'contact-form';
+    const lambdaUrl = process.env.LAMBDA_URL || 'https://lambda-function-url.lambda-url.region.amazonaws.com';
+    
     try {
-      const response = await fetch(api_url, {
+      const response = await fetch(lambdaUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Custom-Header': header,
-          'x-api-key': api_key
         },
         body: JSON.stringify(formData)
       });
